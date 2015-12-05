@@ -1,5 +1,5 @@
-#!/bin/sh -e
+#!/bin/bash
 
-chown -R statsd:statsd /statsd-config.js
+chown -R nobody:nogroup /statsd-config.js
 
-exec gosu statsd statsd /statsd-config.js
+gosu nobody statsd /statsd-config.js
